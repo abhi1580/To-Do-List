@@ -50,9 +50,9 @@ const ToDoList = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container my-5">
       <h1 className="text-center mb-4">To-Do List</h1>
-      <div>
+      <div className="mb-4">
         <input
           type="text"
           className="form-control mb-3"
@@ -66,9 +66,9 @@ const ToDoList = () => {
         >
           {editingIndex !== null ? "Update Task" : "Add Task"}
         </button>
-        <hr />
       </div>
-      <table className="table">
+
+      <table className="table table-striped table-bordered table-hover">
         <thead>
           <tr>
             <th>Task</th>
@@ -82,8 +82,8 @@ const ToDoList = () => {
               <td>
                 {editingIndex !== index && (
                   <button
-                    style={{ marginRight: 5 }}
                     className="btn btn-danger btn-sm mr-2"
+                    style={{ marginRight: "10px" }}
                     onClick={() => deleteTask(index)}
                   >
                     Delete
